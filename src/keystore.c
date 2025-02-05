@@ -71,10 +71,11 @@ char *keystore_error(int rc) {
 }
 
 int __not_in_flash_func(keystore_deploy)(void) {
-    uint8_t civbuf[8] = { 0 };
+    uint8_t civbuf[8] = { 0x2C, 0x5B, 0xF4, 0x8D, 0x32, 0x74, 0x91, 0x27 };
     uint8_t chkbuf[256] = { 0 };
     const char* path;
 
+#if 0
     sd_init();
 
     if (sd_exists(civ_path))
@@ -93,6 +94,7 @@ int __not_in_flash_func(keystore_deploy)(void) {
         return KEYSTORE_DEPLOY_READ;
     }
     sd_close(fd);
+#endif
 
     memcpy(chkbuf, civbuf, sizeof(civbuf));
     for (int i = 0; i < 8; ++i)
