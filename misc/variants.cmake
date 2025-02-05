@@ -15,7 +15,6 @@ if (VARIANT STREQUAL "SD2PSX")
     set(PIN_PSX_CLK 18)
     set(PIN_PSX_CMD 19)
     set(PIN_PSX_DAT 20)
-    set(PIN_PSX_SPD_SEL 10)
     add_compile_definitions("UART_TX=8"
                             "UART_RX=9"
                             "UART_PERIPH=uart1"
@@ -39,7 +38,6 @@ elseif( VARIANT STREQUAL "PMC+")
     set(PIN_PSX_CLK 8)
     set(PIN_PSX_CMD 6)
     set(PIN_PSX_DAT 5)
-    set(PIN_PSX_SPD_SEL 10)
     add_compile_definitions("UART_TX=0"
                             "UART_RX=1"
                             "UART_PERIPH=uart1"
@@ -63,7 +61,6 @@ elseif( VARIANT STREQUAL "PSXMemCard")
     set(PIN_PSX_CLK 8)
     set(PIN_PSX_CMD 6)
     set(PIN_PSX_DAT 5)
-    set(PIN_PSX_SPD_SEL 10)
     add_compile_definitions("UART_TX=0"
                             "UART_RX=1"
                             "UART_PERIPH=uart1"
@@ -87,9 +84,8 @@ elseif( VARIANT STREQUAL "PMCZero")
     set(PIN_PSX_CLK 12)
     set(PIN_PSX_CMD 10)
     set(PIN_PSX_DAT 9)
-    set(PIN_PSX_SPD_SEL 11)
-    add_compile_definitions("UART_TX=7"
-                            "UART_RX=8"
+    add_compile_definitions("UART_TX=8"
+                            "UART_RX=9"
                             "UART_PERIPH=uart1"
                             "UART_BAUD=115200"
                             "SD_PERIPH=SPI"
@@ -111,7 +107,6 @@ elseif( VARIANT STREQUAL "SD2PSXlite")
     set(PIN_PSX_CLK 18)
     set(PIN_PSX_CMD 19)
     set(PIN_PSX_DAT 20)
-    set(PIN_PSX_SPD_SEL 10)
     add_compile_definitions("UART_TX=8"
                             "UART_RX=9"
                             "UART_PERIPH=uart1"
@@ -135,6 +130,5 @@ else()
     set(PIN_PSX_CLK 18)
     set(PIN_PSX_CMD 19)
     set(PIN_PSX_DAT 20)
-    set(PIN_PSX_SPD_SEL 10)
 endif()
 
